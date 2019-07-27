@@ -1,9 +1,16 @@
+import "reflect-metadata";
 import {Service} from "./service";
-import {InMemoryStore} from "./core/store/in-memory";
 
-export const Taff = {};
+export class Taff {
 
-const service = new Service();
+    static service(name?: string) {
+        return new Service(name);
+    }
 
-service.store.use(InMemoryStore);
+}
+
+export * from './service';
+export * from './debugger';
+export * from './config';
+export * from './store';
 
