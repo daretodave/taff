@@ -10,13 +10,8 @@ config({
 
 export const HOST: string = process.env.HOST || "0.0.0.0";
 export const PORT: number = Number(process.env.PORT || 8080);
-
 export const DEVELOPMENT: boolean = process.env.MODE === "development";
 export const PRODUCTION: boolean = process.env.MODE === "production";
-
-export const BCRYPT_ROUNDS: number = asNumber(process.env.BCRYPT_ROUNDS, 10);
-
-export const JWT_SECRET = process.env.JWT_SECRET || 'TEMP_SECRET';
 export const DB_DIALECT = process.env.DB_DIALECT || 'sqlite';
 export const DB_STORAGE = process.env.DB_STORAGE || ':memory:';
 export const DB_HOST = process.env.DB_HOST;

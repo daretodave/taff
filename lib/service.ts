@@ -6,7 +6,7 @@ import {createKoaServer} from "routing-controllers";
 import {HOST, PORT} from "./config";
 import {out} from "./logger";
 import {ModelValidationError} from "./http/error/model-validation";
-import validate = WebAssembly.validate;
+import {validate} from "class-validator";
 
 const {path} = require('app-root-path');
 
